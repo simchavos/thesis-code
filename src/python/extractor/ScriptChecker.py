@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 
 from src.python.results.Graphs import send_request
 
+
 def check_repo(repo, headers):
     # Get the contents of the root directory of the repository
     url = f"https://api.github.com/repos/{repo}/contents/"
@@ -17,13 +18,14 @@ def check_repo(repo, headers):
 
     # Look for .sh files in the top-level directory
     for item in contents:
-        if item['type'] == 'file' and item['name'].endswith('.sh'):
+        if item["type"] == "file" and item["name"].endswith(".sh"):
             return True
     return False
 
+
 def has_shell_scripts():
-    python_repos = open(os.path.join("../data/rq1_python_repos.txt"), 'r')
-    java_repos = open(os.path.join("../data/rq1_java_repos.txt"), 'r')
+    python_repos = open(os.path.join("../data/rq1_python_repos.txt"), "r")
+    java_repos = open(os.path.join("../data/rq1_java_repos.txt"), "r")
     repos = python_repos.readlines() + java_repos.readlines()
 
     load_dotenv()
@@ -33,8 +35,10 @@ def has_shell_scripts():
     }
     count = 0
     for repo in repos:
-        if check_repo(repo.strip(), headers): count += 1
+        if check_repo(repo.strip(), headers):
+            count += 1
 
     return count
+
 
 print(has_shell_scripts())

@@ -409,7 +409,7 @@ def remove_repos_without_maven():
         "braintree/android-card-form",
         "arakelian/java-jq",
     ]
-    with open("../data/report_sampled_repos.txt", "r", encoding="utf-8") as infile:
+    with open("../data/rq3_repos.txt", "r", encoding="utf-8") as infile:
         repos = [line.strip() for line in infile if line.strip()]
 
     filtered_repos = [repo for repo in repos if repo not in remove]

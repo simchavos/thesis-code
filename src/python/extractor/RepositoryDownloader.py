@@ -160,9 +160,9 @@ if __name__ == "__main__":
         AutomationDownloader("../output/java"),
         AutomationDownloader("../output/python"),
     ]
-    with open("../data/python_sampled_repos.txt") as file:
+    with open("../data/rq1_python_repos.txt") as file:
         repos = [line.strip() for line in file if line.strip()]
-    with open("../data/java_sampled_repos.txt") as file:
+    with open("../data/rq1_java_repos.txt") as file:
         repos.extend([line.strip() for line in file if line.strip()])
 
     no_poms = download_files(repos, downloaders)

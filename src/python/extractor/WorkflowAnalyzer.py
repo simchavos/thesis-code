@@ -71,8 +71,8 @@ class AutomationExtractor:
 
     def analyze_all_files(
         self,
-        python_dir="../data/python_sampled_repos.txt",
-        java_dir="../data/java_sampled_repos.txt",
+        python_dir="../data/rq1_python_repos.txt",
+        java_dir="../data/rq1_java_repos.txt",
         specify_language=False,
     ):
         repos = []

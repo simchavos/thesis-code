@@ -22,8 +22,8 @@ def check_repo(repo, headers):
     return False
 
 def has_shell_scripts():
-    python_repos = open(os.path.join("../data/python_sampled_repos.txt"), 'r')
-    java_repos = open(os.path.join("../data/java_sampled_repos.txt"), 'r')
+    python_repos = open(os.path.join("../data/rq1_python_repos.txt"), 'r')
+    java_repos = open(os.path.join("../data/rq1_java_repos.txt"), 'r')
     repos = python_repos.readlines() + java_repos.readlines()
 
     load_dotenv()

@@ -159,8 +159,8 @@ if __name__ == "__main__":
     domains = parse_markdown_to_domain("../data/automations.md")
 
     # Open repository files
-    python_repos = open(os.path.join("../data/python_sampled_repos.txt"), "r")
-    java_repos = open(os.path.join("../data/java_sampled_repos.txt"), "r")
+    python_repos = open(os.path.join("../data/rq1_python_repos.txt"), "r")
+    java_repos = open(os.path.join("../data/rq1_java_repos.txt"), "r")
     repos = python_repos.readlines() + java_repos.readlines()
 
     number_of_repos = len(

@@ -23,9 +23,9 @@ headers = {
     "Authorization": f"token {github_token}",
 }
 
-with open("../data/java_sampled_repos.txt") as file:
+with open("../data/rq1_java_repos.txt") as file:
     repos = [line.strip() for line in file if line.strip()]
-with open("../data/python_sampled_repos.txt") as file:
+with open("../data/rq1_python_repos.txt") as file:
     repos.extend([line.strip() for line in file if line.strip()])
 with open("../output/automations_dict.pkl", "rb") as file:
     domains = parse_markdown_to_domain("../data/automations.md")

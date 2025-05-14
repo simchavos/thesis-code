@@ -227,13 +227,13 @@ def statistics(average, least):
 
 
 if __name__ == "__main__":
-    with open("../data/report_sampled_repos.txt") as file:
+    with open("../data/rq3_repos.txt") as file:
         repos = [line.strip() for line in file if line.strip()]
 
     download_files(repos, [AutomationDownloader("../reports/repositories")])
     automationsExtractor = AutomationExtractor("../reports/repositories")
     total_repos = automationsExtractor.analyze_all_files(
-        python_dir="../data/empty.txt", java_dir="../data/report_sampled_repos.txt"
+        python_dir="../data/empty.txt", java_dir="../data/rq3_repos.txt"
     )
     domains = parse_markdown_to_domain("../data/automations.md")
     report = check_and_report_automations(

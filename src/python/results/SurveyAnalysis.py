@@ -219,8 +219,8 @@ def statistics_technologies_used(column):
 def print_levels(domain_name, name_levels):
     print(f"\n{domain_name} Levels:")
     for task, level in sorted(
-            name_levels.items(),
-            key=lambda x: ["Basic", "Intermediate", "Advanced"].index(x[1]),
+        name_levels.items(),
+        key=lambda x: ["Basic", "Intermediate", "Advanced"].index(x[1]),
     ):
         name = task.split("-")[1].split("(")[0]
         print(f"{name}: {level}")
@@ -242,7 +242,8 @@ for domain_name, levels in [
     ("Code Quality", code_quality_levels),
     ("Collaboration", collaboration_levels),
     ("Artifacts", artifacts_levels),
-    ("Development", development_levels)]:
+    ("Development", development_levels),
+]:
     print_levels(domain_name, levels)
 
 calculate_wilcoxon(df["Q10_1"][2:])

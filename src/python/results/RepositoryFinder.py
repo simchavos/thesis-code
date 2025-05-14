@@ -32,9 +32,9 @@ def sample_repos(input_file, output_file, sample_size=500):
 if __name__ == "__main__":
     number_of_repos = {"python": 55862, "java": 17882}
     input_file = (
-        "../data/java_sampled_repos.txt"
+        "../data/rq1_java_repos.txt"
     )
-    output_file = "../data/report_sampled_repos.txt"
+    output_file = "../data/rq3_repos.txt"
     sample_size = math.ceil(
         number_of_repos["java"] / 20
     )

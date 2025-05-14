@@ -1,7 +1,6 @@
 import csv
 import math
 import random
-import sys
 
 
 # Function to convert CSV to java_repos.txt
@@ -31,13 +30,9 @@ def sample_repos(input_file, output_file, sample_size=500):
 
 if __name__ == "__main__":
     number_of_repos = {"python": 55862, "java": 17882}
-    input_file = (
-        "../data/rq1_java_repos.txt"
-    )
+    input_file = "../data/rq1_java_repos.txt"
     output_file = "../data/rq3_repos.txt"
-    sample_size = math.ceil(
-        number_of_repos["java"] / 20
-    )
+    sample_size = math.ceil(number_of_repos["java"] / 20)
 
     sample_repos(input_file, output_file, sample_size)
     print(f"Sampled {sample_size} unique repositories written to {output_file}")
